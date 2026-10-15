@@ -27,7 +27,7 @@ export function SectionHeading({
   return (
     <div
       data-reveal
-      className={`${centered ? "mx-auto text-center" : ""} max-w-3xl ${className}`}
+      className={`${centered ? "mx-auto text-center" : ""} max-w-3xl ${className}`.trim()}
     >
       {eyebrow && (
         <p className={`eyebrow mb-4 ${light ? "!text-gold-light" : ""}`}>{eyebrow}</p>

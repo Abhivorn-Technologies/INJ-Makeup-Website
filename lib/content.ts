@@ -532,6 +532,17 @@ export const galleryItems: { photo: PhotoKey; category: GalleryCategory }[] = [
   { photo: "redSaree", category: "bridal" },
   { photo: "pinkLehenga", category: "bridal" },
   { photo: "redDupatta", category: "bridal" },
+  // Latest Gallery Additions (from assets/GALLERY/)
+  { photo: "gallery03_3", category: "occasion" },
+  { photo: "gallery0632", category: "bridal" },
+  { photo: "gallery0633", category: "bridal" },
+  { photo: "gallery1329", category: "editorial" },
+  { photo: "gallery1366", category: "editorial" },
+  { photo: "gallery6528", category: "bridal" },
+  { photo: "gallery6980", category: "occasion" },
+  { photo: "gallery7035_1", category: "bridal" },
+  { photo: "galleryPhotoOutput3", category: "occasion" },
+  { photo: "galleryVai09726", category: "editorial" },
 ];
 
 /**

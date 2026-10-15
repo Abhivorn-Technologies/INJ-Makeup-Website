@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Car, Clock, Mail, MapPin, Phone } from "lucide-react";
 
 import { ContactForm } from "@/components/booking/ContactForm";
+import { FacebookIcon, InstagramIcon, YouTubeIcon } from "@/components/shared/BrandIcons";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { Ornament } from "@/components/shared/Ornament";
@@ -24,7 +25,7 @@ export default function ContactPage() {
         <div className="container-luxe">
           <Breadcrumbs items={[{ name: "Contact", href: "/contact" }]} />
           <div className="mt-8 grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
-            <div>
+            <div data-reveal>
               <p className="eyebrow">Get in touch</p>
               <h1 className="mt-4 text-[2.6rem] leading-[1.05] text-ink sm:text-[3.4rem]">
                 We’d love to <span className="italic text-gold-deep">hear from you</span>
@@ -92,12 +93,45 @@ export default function ContactPage() {
                   </div>
                 </div>
               </address>
-              <div className="mt-10">
+              <div className="mt-10 flex flex-wrap items-center gap-4">
                 <WhatsAppButton />
+              </div>
+
+              <div className="mt-8 border-t border-gold/30 pt-6">
+                <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-brown">Follow our work</h2>
+                <div className="mt-3 flex items-center gap-3" aria-label="Social media">
+                  <a
+                    href={site.social.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-btn social-btn-instagram grid h-10 w-10 place-items-center rounded-full"
+                    aria-label="Instagram (opens in a new tab)"
+                  >
+                    <InstagramIcon size={18} />
+                  </a>
+                  <a
+                    href={site.social.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-btn social-btn-facebook grid h-10 w-10 place-items-center rounded-full"
+                    aria-label="Facebook (opens in a new tab)"
+                  >
+                    <FacebookIcon size={18} />
+                  </a>
+                  <a
+                    href={site.social.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-btn social-btn-youtube grid h-10 w-10 place-items-center rounded-full"
+                    aria-label="YouTube (opens in a new tab)"
+                  >
+                    <YouTubeIcon size={18} />
+                  </a>
+                </div>
               </div>
             </div>
 
-            <div className="border border-gold/30 bg-white p-6 md:p-10">
+            <div data-reveal style={{ "--reveal-delay": "120ms" } as React.CSSProperties} className="card-hover-lift border border-gold/30 bg-white p-6 md:p-10">
               <h2 className="font-display text-[2rem] text-ink">Send us a message</h2>
               <p className="mb-8 mt-2 text-sm text-muted">
                 For appointments, the{" "}
@@ -112,7 +146,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section aria-label="Map" className="bg-ivory">
+      <section data-reveal aria-label="Map" className="bg-ivory">
         <div className="relative h-[420px] w-full border-y border-gold/30 bg-sand">
           <iframe
             title="Map showing INJ Makeup Studio, Banjara Hills, Hyderabad"

@@ -31,9 +31,11 @@ export function HeroSection() {
 
       <div className="container-luxe relative grid items-center gap-12 pb-20 pt-10 md:pt-14 lg:grid-cols-[0.92fr_1.08fr] lg:gap-10 lg:pb-28 lg:pt-16">
         <div className="order-2 lg:order-1">
-          <p className="eyebrow">INJ Makeup Studio &amp; Academy</p>
+          <p data-reveal className="eyebrow">INJ Makeup Studio &amp; Academy</p>
           <h1
             id="hero-heading"
+            data-reveal
+            style={{ "--reveal-delay": "80ms" } as React.CSSProperties}
             className="mt-5 text-[3.1rem] uppercase leading-[0.98] tracking-[0.02em] text-ink sm:text-[4rem] lg:text-[4.6rem] xl:text-[5.2rem]"
           >
             Beauty,
@@ -42,13 +44,19 @@ export function HeroSection() {
             <br />
             <span className="font-normal normal-case italic text-gold-deep">to art.</span>
           </h1>
-          <div className="mt-7 h-px w-24 bg-gold" aria-hidden="true" />
-          <p className="mt-7 max-w-[34rem] text-[1.05rem] leading-[1.8] text-muted">
-            Discover the art of timeless beauty with personalised bridal makeup, sophisticated party looks, and
-            professional hairstyling. Every look is thoughtfully created to celebrate your features, your personality,
-            and your special moments.
-          </p>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+          <div data-reveal style={{ "--reveal-delay": "160ms" } as React.CSSProperties}>
+            <div className="mt-7 h-px w-24 bg-gold" aria-hidden="true" />
+            <p className="mt-7 max-w-[34rem] text-[1.05rem] leading-[1.8] text-muted">
+              Discover the art of timeless beauty with personalised bridal makeup, sophisticated party looks, and
+              professional hairstyling. Every look is thoughtfully created to celebrate your features, your personality,
+              and your special moments.
+            </p>
+          </div>
+          <div
+            data-reveal
+            style={{ "--reveal-delay": "240ms" } as React.CSSProperties}
+            className="mt-9 flex flex-col gap-3 sm:flex-row"
+          >
             <Link href="/book-appointment" className="btn btn-gold">
               Book Your Bridal Look <ArrowRight size={16} aria-hidden="true" />
             </Link>
@@ -56,7 +64,11 @@ export function HeroSection() {
               Explore Our Portfolio
             </Link>
           </div>
-          <ul className="mt-12 grid grid-cols-3 gap-4 border-t border-gold/30 pt-7 sm:max-w-lg">
+          <ul
+            data-reveal
+            style={{ "--reveal-delay": "320ms" } as React.CSSProperties}
+            className="mt-12 grid grid-cols-3 gap-4 border-t border-gold/30 pt-7 sm:max-w-lg"
+          >
             {highlights.map(({ Icon, label }) => (
               <li key={label} className="flex flex-col items-start gap-3">
                 <span className="grid h-11 w-11 place-items-center rounded-full border border-gold/60 text-gold-deep">
@@ -70,8 +82,12 @@ export function HeroSection() {
           </ul>
         </div>
 
-        <div className="relative order-1 mx-auto w-full max-w-[34rem] lg:order-2 lg:max-w-none lg:pl-10">
-          <div className="frame-gold relative aspect-[4/5] overflow-hidden rounded-t-[999px] bg-beige shadow-[0_40px_80px_-50px_rgba(48,38,31,0.7)] lg:aspect-[5/6]">
+        <div
+          data-reveal
+          style={{ "--reveal-delay": "180ms" } as React.CSSProperties}
+          className="relative order-1 mx-auto w-full max-w-[34rem] lg:order-2 lg:max-w-none lg:pl-10"
+        >
+          <div className="frame-gold float-hero-main relative aspect-[4/5] min-h-[380px] overflow-hidden rounded-t-[999px] bg-beige shadow-[0_40px_80px_-50px_rgba(48,38,31,0.7)] sm:min-h-[440px] lg:aspect-[5/6] lg:min-h-[480px]">
             <Image
               src={photos.heroBridal.src}
               alt={photos.heroBridal.alt}
@@ -82,8 +98,8 @@ export function HeroSection() {
               className="object-cover object-[50%_22%]"
             />
           </div>
-          <div className="absolute -bottom-8 -left-2 w-[38%] sm:-left-8 lg:-left-4">
-            <div className="frame-gold relative aspect-square overflow-hidden rounded-full border-[6px] border-cream bg-beige shadow-[0_24px_50px_-28px_rgba(48,38,31,0.8)]">
+          <div className="float-hero-sub absolute -bottom-8 -left-2 w-[38%] sm:-left-8 lg:-left-4">
+            <div className="frame-gold relative aspect-square min-h-[120px] overflow-hidden rounded-full border-[6px] border-cream bg-beige shadow-[0_24px_50px_-28px_rgba(48,38,31,0.8)] sm:min-h-[150px]">
               <Image
                 src={photos.glitterEye.src}
                 alt={photos.glitterEye.alt}

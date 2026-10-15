@@ -25,7 +25,7 @@ export function CTASection({
   return (
     <section aria-labelledby="cta-heading" className="bg-ivory py-16 md:py-24">
       <div className="container-luxe">
-        <div className="relative isolate overflow-hidden bg-ink">
+        <div style={{ position: "relative" }} className="relative isolate overflow-hidden bg-ink">
           <Image
             src={photos.redDupatta.src}
             alt=""

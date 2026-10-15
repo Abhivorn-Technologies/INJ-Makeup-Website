@@ -8,7 +8,7 @@ import { photos } from "@/lib/photos";
 export function ArticleCard({ article }: { article: Article }) {
   const photo = photos[article.photo];
   return (
-    <article className="group flex h-full flex-col">
+    <article className="group card-hover-lift flex h-full flex-col">
       <Link href={`/blog/${article.slug}`} tabIndex={-1} aria-hidden="true" className="frame-gold img-zoom relative block aspect-[4/3] overflow-hidden bg-beige">
         <Image
           src={photo.src}

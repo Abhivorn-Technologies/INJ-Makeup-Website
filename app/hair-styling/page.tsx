@@ -70,7 +70,7 @@ export default function HairStylingPage() {
               <p>Get in touch to learn more about our hairstyling services and pricing.</p>
             </div>
           </div>
-          <div data-reveal className="frame-gold relative aspect-[4/5] overflow-hidden bg-beige lg:aspect-auto">
+          <div data-reveal className="frame-gold float-gentle relative aspect-[4/5] overflow-hidden bg-beige lg:aspect-auto">
             <Image
               src={photos.hairSleekBun.src}
               alt={photos.hairSleekBun.alt}

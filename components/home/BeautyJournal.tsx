@@ -22,8 +22,8 @@ export function BeautyJournal() {
           }
         />
         <ul className="mt-14 grid gap-10 md:grid-cols-3">
-          {list.map((a) => (
-            <li key={a.slug} data-reveal>
+          {list.map((a, i) => (
+            <li key={a.slug} data-reveal style={{ "--reveal-delay": `${i * 120}ms` } as React.CSSProperties}>
               <ArticleCard article={a} />
             </li>
           ))}

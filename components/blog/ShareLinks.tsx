@@ -9,25 +9,36 @@ export function ShareLinks({ url, title, image }: { url: string; title: string; 
   const [copied, setCopied] = useState(false);
   const enc = encodeURIComponent;
   const links = [
-    { label: "WhatsApp", href: `https://wa.me/?text=${enc(`${title} ${url}`)}`, Icon: WhatsAppIcon },
-    { label: "Facebook", href: `https://www.facebook.com/sharer/sharer.php?u=${enc(url)}`, Icon: FacebookIcon },
+    {
+      label: "WhatsApp",
+      href: `https://wa.me/?text=${enc(`${title} ${url}`)}`,
+      Icon: WhatsAppIcon,
+      hoverClass: "social-btn-whatsapp",
+    },
+    {
+      label: "Facebook",
+      href: `https://www.facebook.com/sharer/sharer.php?u=${enc(url)}`,
+      Icon: FacebookIcon,
+      hoverClass: "social-btn-facebook",
+    },
     {
       label: "Pinterest",
       href: `https://pinterest.com/pin/create/button/?url=${enc(url)}&media=${enc(image)}&description=${enc(title)}`,
       Icon: PinterestIcon,
+      hoverClass: "social-btn-pinterest",
     },
   ];
 
   return (
     <div className="flex flex-wrap items-center gap-3">
       <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brown">Share</span>
-      {links.map(({ label, href, Icon }) => (
+      {links.map(({ label, href, Icon, hoverClass }) => (
         <a
           key={label}
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="grid h-10 w-10 place-items-center rounded-full border border-gold/50 text-brown hover:bg-ink hover:text-gold-light"
+          className={`social-btn grid h-10 w-10 place-items-center rounded-full ${hoverClass}`}
           aria-label={`Share on ${label} (opens in a new tab)`}
         >
           <Icon size={17} />

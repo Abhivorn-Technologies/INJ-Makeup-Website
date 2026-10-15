@@ -13,7 +13,12 @@ export function BrandsSection() {
         />
         <ul className="mx-auto mt-10 flex max-w-5xl flex-wrap items-center justify-center gap-x-3 gap-y-4" aria-label="Makeup brands">
           {brands.map((b, i) => (
-            <li key={b} className="flex items-center gap-3">
+            <li
+              key={b}
+              data-reveal
+              style={{ "--reveal-delay": `${(i % 5) * 80}ms` } as React.CSSProperties}
+              className="flex items-center gap-3"
+            >
               <span className="font-display text-[1.45rem] tracking-[0.06em] text-brown md:text-[1.75rem]">{b}</span>
               {i < brands.length - 1 && (
                 <span aria-hidden="true" className="h-1.5 w-1.5 rotate-45 border border-gold-deep" />

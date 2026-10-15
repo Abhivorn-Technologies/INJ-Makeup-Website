@@ -19,7 +19,7 @@ export default function GalleryPage() {
   return (
     <>
       <section className="bg-cream pb-6 pt-12 md:pt-16">
-        <div className="container-luxe text-center">
+        <div data-reveal className="container-luxe text-center">
           <div className="flex justify-center">
             <Breadcrumbs items={[{ name: "Bridal Gallery", href: "/gallery" }]} />
           </div>
@@ -40,8 +40,12 @@ export default function GalleryPage() {
           <PortfolioGrid items={portfolioItems()} categories={galleryCategories} label="portfolio" />
           <p className="mt-12 text-center text-sm text-muted">
             See our latest work on{" "}
-            <a href={site.social.instagram} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-gold-text underline underline-offset-4">
-              <InstagramIcon size={16} /> Instagram<span className="sr-only"> (opens in a new tab)</span>
+            <a href={site.social.instagram} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-medium text-ink transition-transform hover:scale-105">
+              <span className="social-btn social-btn-instagram grid h-6 w-6 place-items-center rounded-md">
+                <InstagramIcon size={14} />
+              </span>
+              <span className="text-gold-text underline underline-offset-4">Instagram</span>
+              <span className="sr-only"> (opens in a new tab)</span>
             </a>
             .
           </p>

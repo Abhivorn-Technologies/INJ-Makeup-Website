@@ -29,7 +29,7 @@ export default function BookAppointmentPage() {
       <div className="container-luxe">
         <Breadcrumbs items={[{ name: "Book an Appointment", href: "/book-appointment" }]} />
         <div className="mt-8 grid gap-14 lg:grid-cols-[0.75fr_1.25fr] lg:gap-16">
-          <div>
+          <div data-reveal>
             <p className="eyebrow">Appointments</p>
             <h1 className="mt-4 text-[2.6rem] leading-[1.05] text-ink sm:text-[3.3rem]">
               Let’s create your <span className="italic text-gold-deep">signature look</span>
@@ -67,7 +67,7 @@ export default function BookAppointmentPage() {
               </div>
             </div>
 
-            <div className="frame-gold relative mt-12 hidden aspect-[4/5] overflow-hidden bg-beige lg:block">
+            <div className="frame-gold float-gentle relative mt-12 hidden aspect-[4/5] overflow-hidden bg-beige lg:block">
               <Image
                 src={photos.whiteVeil.src}
                 alt={photos.whiteVeil.alt}
@@ -79,7 +79,7 @@ export default function BookAppointmentPage() {
             </div>
           </div>
 
-          <div className="border border-gold/30 bg-white p-6 md:p-10">
+          <div data-reveal style={{ "--reveal-delay": "120ms" } as React.CSSProperties} className="card-hover-lift border border-gold/30 bg-white p-6 md:p-10">
             <Suspense fallback={<p className="text-muted">Loading the booking form…</p>}>
               <BookingForm />
             </Suspense>

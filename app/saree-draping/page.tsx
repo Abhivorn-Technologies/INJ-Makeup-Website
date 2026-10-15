@@ -93,10 +93,10 @@ export default function SareeDrapingPage() {
             </ul>
           </div>
           <div data-reveal className="grid grid-cols-2 gap-4">
-            <div className="frame-gold relative mt-12 aspect-[3/4] overflow-hidden bg-beige">
+            <div className="frame-gold float-bridal-main relative mt-12 aspect-[3/4] overflow-hidden bg-beige">
               <Image src={photos.goldSaree.src} alt={photos.goldSaree.alt} fill placeholder="blur" sizes="(min-width: 1024px) 20vw, 45vw" className="object-cover" />
             </div>
-            <div className="frame-gold relative aspect-[3/4] overflow-hidden bg-beige">
+            <div className="frame-gold float-bridal-sub relative aspect-[3/4] overflow-hidden bg-beige">
               <Image src={photos.redSaree.src} alt={photos.redSaree.alt} fill placeholder="blur" sizes="(min-width: 1024px) 20vw, 45vw" className="object-cover" />
             </div>
           </div>

@@ -59,17 +59,22 @@ export function PortfolioGrid({ items, categories, limit, label, columnsClass = 
 
       <ul className={`${columnsClass} gap-3 sm:gap-4`}>
         {visible.map((item, i) => (
-          <li key={item.src.src} className="mb-3 break-inside-avoid sm:mb-4">
+          <li
+            key={item.src.src}
+            data-reveal
+            style={{ "--reveal-delay": `${(i % 4) * 80}ms` } as React.CSSProperties}
+            className="mb-3 break-inside-avoid sm:mb-4"
+          >
             <button
               type="button"
               onClick={() => setActive(i)}
-              className="frame-gold img-zoom group relative block w-full overflow-hidden bg-beige"
+              className="frame-gold img-zoom card-hover-lift group relative block w-full overflow-hidden bg-beige"
               aria-label={`View larger: ${item.alt}`}
             >
               <Image
                 src={item.src}
                 alt={item.alt}
-                placeholder="blur"
+                placeholder={item.src.blurDataURL ? "blur" : "empty"}
                 sizes="(min-width: 1024px) 24vw, (min-width: 768px) 32vw, 48vw"
                 className="h-auto w-full"
               />

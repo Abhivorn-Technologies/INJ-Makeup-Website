@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { RevealAnimation } from "@/components/shared/RevealAnimation";
+import { ScrollToHomeButton } from "@/components/shared/ScrollToHomeButton";
 import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
 import { site } from "@/lib/site";
 
@@ -63,6 +64,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </main>
         <Footer />
         <WhatsAppButton variant="floating" />
+        <ScrollToHomeButton />
         <RevealAnimation />
       </body>
     </html>

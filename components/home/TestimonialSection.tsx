@@ -20,7 +20,7 @@ export function TestimonialSection() {
               key={t.name}
               data-reveal
               style={{ "--reveal-delay": `${i * 110}ms` } as React.CSSProperties}
-              className="relative flex flex-col border border-gold/35 bg-cream p-8 md:p-10"
+              className="card-hover-lift relative flex flex-col border border-gold/35 bg-cream p-8 md:p-10"
             >
               <span aria-hidden="true" className="font-display text-7xl leading-none text-gold/70">
                 “
