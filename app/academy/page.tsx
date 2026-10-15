@@ -109,7 +109,7 @@ export default function AcademyPage() {
                 key={c.name}
                 data-reveal
                 style={{ "--reveal-delay": `${(i % 3) * 90}ms` } as React.CSSProperties}
-                className="flex flex-col border border-gold/35 bg-ivory p-8"
+                className="card-hover-lift flex flex-col border border-gold/35 bg-ivory p-8"
               >
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-text">{c.level}</p>
                 <h3 className="mt-3 text-[1.65rem] leading-tight text-ink">{c.name}</h3>
@@ -138,7 +138,7 @@ export default function AcademyPage() {
               align="left"
               description="Send us a few details and our academy team will contact you with course information, timings and fees."
             />
-            <div className="frame-gold relative mt-10 hidden aspect-[4/5] overflow-hidden bg-beige lg:block">
+            <div className="frame-gold float-gentle relative mt-10 hidden aspect-[4/5] overflow-hidden bg-beige lg:block">
               <Image
                 src={photos.artistAtWork.src}
                 alt={photos.artistAtWork.alt}
@@ -149,7 +149,7 @@ export default function AcademyPage() {
               />
             </div>
           </div>
-          <div className="border border-gold/30 bg-white p-6 md:p-10">
+          <div data-reveal style={{ "--reveal-delay": "120ms" } as React.CSSProperties} className="card-hover-lift border border-gold/30 bg-white p-6 md:p-10">
             <CourseEnquiryForm />
           </div>
         </div>

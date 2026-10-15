@@ -39,6 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Large raw camera backups
+assets/GALLERY/_originals/
 !.env.example
 
 # local dev enquiry store

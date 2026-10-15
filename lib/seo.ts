@@ -66,7 +66,7 @@ export function localBusinessSchema() {
     name: site.name,
     alternateName: "INJ Makeup Studio",
     url: site.url,
-    logo: absoluteUrl("/brand/inj-logo-full.png"),
+    logo: absoluteUrl("/brand/LOGO ING.png"),
     image: absoluteUrl("/opengraph-image.jpg"),
     description: site.description,
     founder: { "@type": "Person", name: site.founder },

@@ -88,7 +88,7 @@ export default function OurStoryPage() {
             </div>
           </div>
           <div data-reveal className="relative">
-            <div className="frame-gold relative aspect-[4/5] overflow-hidden bg-beige">
+            <div className="frame-gold float-gentle relative aspect-[4/5] overflow-hidden bg-beige">
               <Image
                 src={photos.receptionSoftGlam.src}
                 alt={photos.receptionSoftGlam.alt}
@@ -126,7 +126,7 @@ export default function OurStoryPage() {
         <div className="container-luxe grid items-center gap-12 md:grid-cols-[0.7fr_1.3fr] md:gap-16">
           <div data-reveal className="mx-auto grid aspect-square w-full max-w-xs place-items-center rounded-full border border-gold/50 bg-cream p-12">
             {/* Replace with an approved portrait of the founder when available. */}
-            <Image src="/brand/inj-logo-full.png" alt="INJ Makeup logo" width={407} height={480} className="h-auto w-3/4" />
+            <Image src="/brand/LOGO ING.png" alt="INJ Makeup logo" width={400} height={400} className="logo-spin h-auto w-3/4 object-contain" />
           </div>
           <div data-reveal>
             <p className="eyebrow">Founder</p>

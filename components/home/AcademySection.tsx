@@ -44,8 +44,8 @@ export function AcademySection() {
             </Link>
           </div>
         </div>
-        <div data-reveal className="relative mx-auto w-full max-w-md lg:max-w-none">
-          <div className="frame-gold relative aspect-[4/5] overflow-hidden rounded-t-[999px] bg-brown">
+        <div data-reveal style={{ "--reveal-delay": "140ms" } as React.CSSProperties} className="relative mx-auto w-full max-w-md lg:max-w-none">
+          <div className="frame-gold float-gentle relative aspect-[4/5] min-h-[340px] overflow-hidden rounded-t-[999px] bg-brown sm:min-h-[420px]">
             <Image
               src={photos.academyClass.src}
               alt={photos.academyClass.alt}

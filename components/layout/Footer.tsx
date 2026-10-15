@@ -5,7 +5,6 @@ import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import {
   FacebookIcon,
   InstagramIcon,
-  PinterestIcon,
   WhatsAppIcon,
   YouTubeIcon,
 } from "@/components/shared/BrandIcons";
@@ -24,10 +23,24 @@ const explore = [
 ];
 
 const socials = [
-  { label: "Instagram", href: site.social.instagram, Icon: InstagramIcon },
-  { label: "Facebook", href: site.social.facebook, Icon: FacebookIcon },
-  { label: "Pinterest", href: site.social.pinterest, Icon: PinterestIcon },
-  { label: "YouTube", href: site.social.youtube, Icon: YouTubeIcon },
+  {
+    label: "Instagram",
+    href: site.social.instagram,
+    Icon: InstagramIcon,
+    btnClass: "social-btn-instagram",
+  },
+  {
+    label: "Facebook",
+    href: site.social.facebook,
+    Icon: FacebookIcon,
+    btnClass: "social-btn-facebook",
+  },
+  {
+    label: "YouTube",
+    href: site.social.youtube,
+    Icon: YouTubeIcon,
+    btnClass: "social-btn-youtube",
+  },
 ];
 
 async function CopyrightYear() {
@@ -41,8 +54,10 @@ export function Footer() {
       <div className="h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
       <div className="container-luxe grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.3fr] lg:py-20">
         <div>
-          <Link href="/" className="inline-flex items-center gap-3" aria-label={`${site.name} — home`}>
-            <Image src="/brand/inj-mark.png" alt="" width={256} height={256} className="h-auto w-12" />
+          <Link href="/" className="group inline-flex items-center gap-3" aria-label={`${site.name} — home`}>
+            <span className="logo-glow-zoom">
+              <Image src="/brand/LOGO ING.png" alt="" width={256} height={256} className="logo-spin h-auto w-12 shrink-0" />
+            </span>
             <span className="flex flex-col leading-none">
               <span className="font-display text-2xl tracking-[0.18em] text-cream">INJ</span>
               <span className="mt-1 text-[0.6rem] font-semibold uppercase tracking-[0.24em] text-gold-light">
@@ -55,13 +70,13 @@ export function Footer() {
             {site.founder}.
           </p>
           <ul className="mt-6 flex gap-3" aria-label="Social media">
-            {socials.map(({ label, href, Icon }) => (
+            {socials.map(({ label, href, Icon, btnClass }) => (
               <li key={label}>
                 <a
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="grid h-10 w-10 place-items-center rounded-full border border-cream/20 text-cream/80 transition-colors hover:border-gold-light hover:text-gold-light"
+                  className={`social-btn grid h-10 w-10 place-items-center rounded-full ${btnClass}`}
                   aria-label={`${label} (opens in a new tab)`}
                 >
                   <Icon size={18} />
@@ -138,33 +153,64 @@ export function Footer() {
               href={whatsappUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex gap-3 hover:text-gold-light"
+              className="group flex gap-3 text-cream/80 transition-colors duration-300 hover:text-white"
             >
-              <WhatsAppIcon size={17} className="mt-0.5 shrink-0 text-gold-light" />
-              WhatsApp enquiry<span className="sr-only"> (opens in a new tab)</span>
+              <WhatsAppIcon
+                size={17}
+                className="mt-0.5 shrink-0 text-gold-light transition-all duration-300 group-hover:text-[#25D366] group-hover:drop-shadow-[0_0_8px_rgba(37,211,102,0.7)]"
+              />
+              <span className="transition-colors duration-300 group-hover:text-[#25D366]">
+                WhatsApp enquiry
+              </span>
+              <span className="sr-only"> (opens in a new tab)</span>
             </a>
           </address>
         </div>
       </div>
 
       <div className="border-t border-cream/10">
-        <div className="container-luxe flex flex-col gap-3 py-6 text-xs text-cream/60 md:flex-row md:items-center md:justify-between">
-          <p>
-            © <CopyrightYear /> {site.name}. All rights reserved.
+        <div className="container-luxe flex flex-col items-center justify-between gap-y-4 gap-x-6 py-6 pb-32 lg:pb-6 text-xs text-cream/60 lg:flex-row">
+          <p className="text-center lg:text-left">
+            <span>© <CopyrightYear /> {site.name}. </span>
+            <span className="block sm:inline">All rights reserved.</span>
           </p>
-          <ul className="flex flex-wrap gap-x-6 gap-y-2">
+
+          <p className="text-center">
+            <span className="text-cream/50">Developed By </span>
+            <a
+              href="https://www.abhivorn.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="dev-credit-shine"
+              aria-label="Developed By Abhivorn Technologies Pvt Ltd. (opens in a new tab)"
+            >
+              Abhivorn Technologies Pvt Ltd.
+            </a>
+            <span className="text-cream/50"> &amp; </span>
+            <a
+              href="https://www.digilevelup.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="dev-credit-shine"
+              aria-label="DigiLevelUp (opens in a new tab)"
+            >
+              DigiLevelUp
+            </a>
+          </p>
+
+          <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2.5 text-center lg:justify-end">
             <li>
-              <Link href="/privacy-policy" className="hover:text-gold-light">
+              <Link href="/privacy-policy" className="whitespace-nowrap hover:text-gold-light">
                 Privacy Policy
               </Link>
             </li>
             <li>
-              <Link href="/terms-and-conditions" className="hover:text-gold-light">
+              <Link href="/terms-and-conditions" className="whitespace-nowrap hover:text-gold-light">
                 Terms &amp; Conditions
               </Link>
             </li>
             <li>
-              <Link href="/sitemap.xml" prefetch={false} className="hover:text-gold-light">
+              <Link href="/sitemap.xml" prefetch={false} className="whitespace-nowrap hover:text-gold-light">
                 Sitemap
               </Link>
             </li>

@@ -12,7 +12,7 @@ export function HairSection() {
       <div className="container-luxe grid gap-14 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
         <div data-reveal className="lg:order-2 lg:sticky lg:top-40 lg:self-start">
           <div className="grid grid-cols-2 gap-4">
-            <div className="frame-gold relative mt-14 aspect-[3/4] overflow-hidden bg-beige">
+            <div className="frame-gold float-bridal-main relative mt-14 aspect-[3/4] min-h-[220px] overflow-hidden bg-beige sm:min-h-[300px]">
               <Image
                 src={photos.hairPearls.src}
                 alt={photos.hairPearls.alt}
@@ -22,7 +22,7 @@ export function HairSection() {
                 className="object-cover object-[50%_35%]"
               />
             </div>
-            <div className="frame-gold relative aspect-[3/4] overflow-hidden bg-beige">
+            <div className="frame-gold float-bridal-sub relative aspect-[3/4] min-h-[220px] overflow-hidden bg-beige sm:min-h-[300px]">
               <Image
                 src={photos.hairSleekBun.src}
                 alt={photos.hairSleekBun.alt}

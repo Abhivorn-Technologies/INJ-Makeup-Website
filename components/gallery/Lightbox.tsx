@@ -74,7 +74,7 @@ export function Lightbox({ items, index, onClose, onIndexChange }: Props) {
               alt={current.alt}
               fill
               sizes="100vw"
-              placeholder="blur"
+              placeholder={current.src.blurDataURL ? "blur" : "empty"}
               className="object-contain"
             />
           </div>

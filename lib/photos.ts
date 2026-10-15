@@ -28,6 +28,21 @@ import goldSaree from "@/assets/photos/look-gold-saree.jpg";
 import floralCrown from "@/assets/photos/editorial-floral-crown.jpg";
 import pinkLehenga from "@/assets/photos/bridal-pink-lehenga.jpg";
 
+// Latest Gallery Additions (from assets/GALLERY/)
+import gallery03_3 from "@/assets/GALLERY/03 3.jpg.jpeg";
+import gallery0632 from "@/assets/GALLERY/IMG_0632.png";
+import gallery0633 from "@/assets/GALLERY/IMG_0633.png";
+import gallery0911 from "@/assets/GALLERY/IMG_0911.png";
+import gallery1329 from "@/assets/GALLERY/IMG_1329.jpeg";
+import gallery1366 from "@/assets/GALLERY/IMG_1366.jpeg";
+import gallery6115 from "@/assets/GALLERY/IMG_6115.jpg.jpeg";
+import gallery6132 from "@/assets/GALLERY/IMG_6132.jpg.jpeg";
+import gallery6528 from "@/assets/GALLERY/IMG_6528.JPG.jpeg";
+import gallery6980 from "@/assets/GALLERY/IMG_6980.jpeg";
+import gallery7035_1 from "@/assets/GALLERY/IMG_7035 (1).jpeg";
+import galleryPhotoOutput3 from "@/assets/GALLERY/photo-output 3.jpeg";
+import galleryVai09726 from "@/assets/GALLERY/VAI09726.JPG.jpeg";
+
 export type Photo = { src: StaticImageData; alt: string };
 
 export const photos = {
@@ -118,6 +133,58 @@ export const photos = {
   pinkLehenga: {
     src: pinkLehenga,
     alt: "Bride in a magenta lehenga with a jasmine-adorned bun and turquoise jewellery",
+  },
+  gallery03_3: {
+    src: gallery03_3,
+    alt: "Reception look in an embellished silver gown with diamond jewellery, white roses in the hair and shimmering lilac eye makeup",
+  },
+  gallery0632: {
+    src: gallery0632,
+    alt: "Bridal portrait in an emerald green embroidered lehenga and gold passa, with dramatic gold glitter eye makeup",
+  },
+  gallery0633: {
+    src: gallery0633,
+    alt: "Close-up bridal portrait in emerald green and gold jewellery with winged liner and soft glossy lips",
+  },
+  gallery0911: {
+    src: gallery0911,
+    alt: "Reception look with soft bronze eyes, peach lips and a gold matha patti",
+  },
+  gallery1329: {
+    src: gallery1329,
+    alt: "Editorial studio portrait in a metallic ruffled couture gown with sculpted nude makeup and bronze eyes",
+  },
+  gallery1366: {
+    src: gallery1366,
+    alt: "High-fashion editorial portrait framed in sheer tulle with luminous skin and defined eyes",
+  },
+  gallery6115: {
+    src: gallery6115,
+    alt: "Editorial portrait with lilac eye makeup and a voluminous pink organza ruffle",
+  },
+  gallery6132: {
+    src: gallery6132,
+    alt: "Bride in a white embellished gown and long veil in a garden setting",
+  },
+  gallery6528: {
+    src: gallery6528,
+    alt: "Radiant bride in a magenta silk saree with traditional gold temple jewellery and a maang tikka",
+  },
+  gallery6980: {
+    src: gallery6980,
+    alt: "Evening occasion look in deep green velvet with cascading waves, a diamond choker and multi-tone glitter eye makeup",
+  },
+  gallery7035_1: {
+    src: gallery7035_1,
+    alt: "Bride in a red embroidered lehenga with a heavy kundan and ruby choker, nath and delicate veil",
+  },
+  galleryPhotoOutput3: {
+    src: galleryPhotoOutput3,
+    alt: "Full-length reception portrait in a metallic gold tissue saree with tiered diamond jewellery next to a chandelier",
+  },
+  galleryVai09726: {
+    src: galleryVai09726,
+    alt: "Artistic photoshoot portrait with moody lighting, emerald green veil, kundan jewellery and a peacock feather",
   },
 } satisfies Record<string, Photo>;
 

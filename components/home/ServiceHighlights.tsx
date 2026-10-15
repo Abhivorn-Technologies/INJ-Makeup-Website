@@ -31,11 +31,11 @@ export function ServiceHighlights() {
                 key={s.slug}
                 data-reveal
                 style={{ "--reveal-delay": `${(i % 3) * 110}ms` } as React.CSSProperties}
-                className={`group flex flex-col ${i % 3 === 1 ? "lg:mt-16" : ""}`}
+                className="group flex flex-col"
               >
                 <Link
                   href={`/makeup/${s.slug}`}
-                  className="frame-gold img-zoom relative block aspect-[4/5] overflow-hidden bg-beige"
+                  className="frame-gold img-zoom card-hover-lift relative block w-full aspect-[4/5] min-h-[280px] overflow-hidden bg-beige"
                   tabIndex={-1}
                   aria-hidden="true"
                 >
@@ -45,7 +45,7 @@ export function ServiceHighlights() {
                     fill
                     placeholder="blur"
                     sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 92vw"
-                    className="object-cover object-[50%_30%]"
+                    className="object-cover object-center"
                   />
                 </Link>
                 <div className="flex flex-1 flex-col pt-6">

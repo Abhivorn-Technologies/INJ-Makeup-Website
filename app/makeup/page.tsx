@@ -51,7 +51,7 @@ export default function MakeupPage() {
             {services.map((s, i) => (
               <li key={s.slug} data-reveal>
                 <article className={`grid items-center gap-8 border-b border-gold/25 pb-10 md:grid-cols-[0.75fr_1.25fr] md:gap-14 ${i % 2 ? "md:[&>*:first-child]:order-2" : ""}`}>
-                  <Link href={`/makeup/${s.slug}`} tabIndex={-1} aria-hidden="true" className="frame-gold img-zoom relative block aspect-[4/3] overflow-hidden bg-beige md:aspect-[5/4]">
+                  <Link href={`/makeup/${s.slug}`} tabIndex={-1} aria-hidden="true" className="frame-gold img-zoom card-hover-lift relative block aspect-[4/3] overflow-hidden bg-beige md:aspect-[5/4]">
                     <Image
                       src={photos[s.photo].src}
                       alt=""
@@ -83,7 +83,7 @@ export default function MakeupPage() {
             ))}
           </ul>
 
-          <div className="mt-14 grid gap-6 border border-gold/35 bg-cream p-8 md:grid-cols-[1fr_auto] md:items-center md:p-10">
+          <div data-reveal className="card-hover-lift mt-14 grid gap-6 border border-gold/35 bg-cream p-8 md:grid-cols-[1fr_auto] md:items-center md:p-10">
             {additionalMakeupServices.map((a) => (
               <div key={a.name}>
                 <h2 className="text-[1.7rem] text-ink">{a.name}</h2>

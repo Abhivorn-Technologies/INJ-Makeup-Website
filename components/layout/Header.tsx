@@ -92,14 +92,16 @@ export function Header() {
           }`}
         >
           <Link href="/" className="group flex items-center gap-3" aria-label={`${site.name} — home`}>
-            <Image
-              src="/brand/inj-mark.png"
-              alt=""
-              width={256}
-              height={256}
-              preload
-              className={`h-auto transition-[width] duration-500 ${scrolled ? "w-10" : "w-11 xl:w-[3.25rem]"}`}
-            />
+            <span className="logo-glow-zoom">
+              <Image
+                src="/brand/LOGO ING.png"
+                alt=""
+                width={256}
+                height={256}
+                preload
+                className={`logo-spin h-auto shrink-0 transition-[width] duration-500 ${scrolled ? "w-10" : "w-11 xl:w-[3.25rem]"}`}
+              />
+            </span>
             <span className="flex flex-col leading-none">
               <span className="font-display text-[1.45rem] font-semibold tracking-[0.18em] text-ink">INJ</span>
               <span className="mt-1 whitespace-nowrap text-[0.55rem] font-semibold uppercase tracking-[0.16em] text-gold-text sm:text-[0.6rem] sm:tracking-[0.24em]">
@@ -120,7 +122,7 @@ export function Header() {
               href={whatsappUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="grid h-10 w-10 place-items-center rounded-full border border-gold/50 text-brown transition-colors hover:bg-ink hover:text-gold-light"
+              className="social-btn social-btn-whatsapp grid h-10 w-10 place-items-center rounded-full"
               aria-label="WhatsApp enquiry (opens in a new tab)"
             >
               <WhatsAppIcon size={18} />
@@ -135,7 +137,7 @@ export function Header() {
               href={whatsappUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="grid h-11 w-11 place-items-center rounded-full border border-gold/50 text-brown"
+              className="social-btn social-btn-whatsapp grid h-11 w-11 place-items-center rounded-full"
               aria-label="WhatsApp enquiry (opens in a new tab)"
             >
               <WhatsAppIcon size={19} />
@@ -192,7 +194,10 @@ export function Header() {
         }`}
       >
         <div className="container-luxe flex items-center justify-between py-3.5">
-          <span className="font-display text-xl tracking-[0.18em] text-ink">INJ</span>
+          <Link href="/" onClick={close} className="flex items-center gap-2.5" aria-label={`${site.name} — home`}>
+            <Image src="/brand/LOGO ING.png" alt="" width={256} height={256} className="logo-spin h-auto w-8 shrink-0" />
+            <span className="font-display text-xl tracking-[0.18em] text-ink">INJ</span>
+          </Link>
           <button
             type="button"
             onClick={close}
@@ -234,7 +239,10 @@ export function Header() {
               rel="noopener noreferrer"
               className="mt-2 flex items-center justify-center gap-2 text-sm text-brown"
             >
-              <InstagramIcon size={18} /> @injmakeup
+              <span className="social-btn social-btn-instagram grid h-6 w-6 place-items-center rounded-md">
+                <InstagramIcon size={14} />
+              </span>
+              <span>@injmakeup</span>
               <span className="sr-only"> on Instagram (opens in a new tab)</span>
             </a>
           </div>

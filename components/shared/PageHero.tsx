@@ -25,7 +25,7 @@ export function PageHero({ eyebrow, title, intro, crumbs, photo, focus = "center
         className="pointer-events-none absolute -right-40 -top-40 h-[34rem] w-[34rem] rounded-full border border-gold/25"
       />
       <div className="container-luxe grid items-center gap-10 py-12 md:py-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:py-20">
-        <div>
+        <div data-reveal>
           <Breadcrumbs items={crumbs} />
           <p className="eyebrow mt-8">{eyebrow}</p>
           <h1 className="mt-4 text-[2.5rem] leading-[1.04] text-ink sm:text-[3.2rem] lg:text-[3.9rem]">{title}</h1>
@@ -34,8 +34,8 @@ export function PageHero({ eyebrow, title, intro, crumbs, photo, focus = "center
           {children && <div className="mt-8 flex flex-wrap gap-3">{children}</div>}
         </div>
         {photo && (
-          <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-            <div className="frame-gold relative aspect-[4/5] overflow-hidden rounded-t-[999px] bg-beige">
+          <div data-reveal style={{ "--reveal-delay": "140ms" } as React.CSSProperties} className="relative mx-auto w-full max-w-md lg:max-w-none">
+            <div className="frame-gold float-gentle relative aspect-[4/5] overflow-hidden rounded-t-[999px] bg-beige">
               <Image
                 src={photo.src}
                 alt={photo.alt}

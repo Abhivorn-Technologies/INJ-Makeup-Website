@@ -10,7 +10,7 @@ export function IntroSection() {
     <section aria-labelledby="intro-heading" className="bg-ivory py-20 md:py-28">
       <div className="container-luxe grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
         <div data-reveal className="relative">
-          <div className="frame-gold relative aspect-[3/4] overflow-hidden bg-beige">
+          <div className="frame-gold float-gentle relative aspect-[3/4] min-h-[340px] overflow-hidden bg-beige sm:min-h-[420px]">
             <Image
               src={photos.artistAtWork.src}
               alt={photos.artistAtWork.alt}

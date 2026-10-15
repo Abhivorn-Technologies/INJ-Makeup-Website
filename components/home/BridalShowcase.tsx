@@ -15,7 +15,7 @@ export function BridalShowcase() {
       />
       <div className="container-luxe relative grid items-center gap-16 lg:grid-cols-2 lg:gap-20">
         <div data-reveal className="relative mx-auto w-full max-w-lg pb-16 lg:max-w-none lg:pb-24">
-          <div className="frame-gold relative aspect-[4/5] w-[82%] overflow-hidden bg-beige">
+          <div className="frame-gold float-bridal-main relative aspect-[4/5] min-h-[320px] w-[82%] overflow-hidden bg-beige sm:min-h-[400px]">
             <Image
               src={photos.maangTikka.src}
               alt={photos.maangTikka.alt}
@@ -25,8 +25,8 @@ export function BridalShowcase() {
               className="object-cover object-[50%_25%]"
             />
           </div>
-          <div className="absolute bottom-0 right-0 w-[48%]">
-            <div className="frame-gold relative aspect-[4/5] overflow-hidden border-[6px] border-sand bg-beige shadow-[0_30px_60px_-30px_rgba(48,38,31,0.7)]">
+          <div className="float-bridal-sub absolute bottom-0 right-0 w-[48%]">
+            <div className="frame-gold relative aspect-[4/5] min-h-[160px] overflow-hidden border-[6px] border-sand bg-beige shadow-[0_30px_60px_-30px_rgba(48,38,31,0.7)] sm:min-h-[200px]">
               <Image
                 src={photos.redJewellery.src}
                 alt={photos.redJewellery.alt}
